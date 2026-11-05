@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          ref: 35940e781fde6e759a922806ddf6b00e42827dea
+          ref: 5e3764d1bf06b2ee6e554b630c2015fc52ccb72a
       - name: Native libraries
         run: |
           sudo apt-get update -q
