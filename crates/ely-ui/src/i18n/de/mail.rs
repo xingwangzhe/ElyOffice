@@ -1,6 +1,13 @@
 //! German ElyMail messages.
 
 pub(super) const DE: &[(&str, &str)] = &[
+    ("mail.body.copy", "Kopieren"),
+    ("mail.body.all", "Alles auswählen"),
+    ("mail.body.copy_image", "Bild kopieren"),
+    ("mail.body.save_image", "Bild speichern unter…"),
+    ("mail.body.copy_link", "Link-Adresse kopieren"),
+    ("mail.body.copy_failed", "Das Bild konnte nicht kopiert werden: {error}"),
+    ("mail.body.copied", "Bild kopiert"),
     ("mail.menu.account", "Konto"),
     ("mail.add.open", "Konto hinzufügen…"),
     ("mail.remove.open", "Konto entfernen…"),

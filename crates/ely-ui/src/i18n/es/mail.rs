@@ -1,6 +1,13 @@
 //! Spanish ElyMail accounts.
 
 pub(super) const ES: &[(&str, &str)] = &[
+    ("mail.body.copy", "Copiar"),
+    ("mail.body.all", "Seleccionar todo"),
+    ("mail.body.copy_image", "Copiar imagen"),
+    ("mail.body.save_image", "Guardar imagen como…"),
+    ("mail.body.copy_link", "Copiar dirección del enlace"),
+    ("mail.body.copy_failed", "No se pudo copiar la imagen: {error}"),
+    ("mail.body.copied", "Imagen copiada"),
     ("mail.menu.account", "Cuenta"),
     ("mail.add.open", "Añadir cuenta…"),
     ("mail.remove.open", "Eliminar cuenta…"),

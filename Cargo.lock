@@ -472,9 +472,9 @@ dependencies = [
 
 [[package]]
 name = "async-executor"
-version = "1.14.0"
+version = "1.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c96bf972d85afc50bf5ab8fe2d54d1586b4e0b46c97c50a0c9e71e2f7bcd812a"
+checksum = "f426a31126c735126297bc5ea7a521263c9faff4f63ca415267ee625651c4f37"
 dependencies = [
  "async-task",
  "concurrent-queue",
@@ -1852,7 +1852,7 @@ checksum = "252afb9ae5eaa683babdc6a068b3f5726eb19e05070c731f9b2a23a7c3e8ed34"
 [[package]]
 name = "ely-account"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "gpui-pre",
@@ -1863,7 +1863,7 @@ dependencies = [
 [[package]]
 name = "ely-agent"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-chat",
  "ely-collab",
@@ -1888,7 +1888,7 @@ dependencies = [
 [[package]]
 name = "ely-calendar"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "gpui-pre",
@@ -1899,7 +1899,7 @@ dependencies = [
 [[package]]
 name = "ely-canvas"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "gpui-pre",
@@ -1909,7 +1909,7 @@ dependencies = [
 [[package]]
 name = "ely-charts"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "gpui-pre",
@@ -1921,7 +1921,7 @@ dependencies = [
 [[package]]
 name = "ely-chat"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "ely-documents",
@@ -1937,7 +1937,7 @@ dependencies = [
 [[package]]
 name = "ely-collab"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "ely-documents",
@@ -1951,7 +1951,7 @@ dependencies = [
 [[package]]
 name = "ely-core"
 version = "0.2.0"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "anyhow",
  "barcoders",
@@ -1981,7 +1981,7 @@ dependencies = [
 [[package]]
 name = "ely-dashboard"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "gpui-pre",
@@ -1992,7 +1992,7 @@ dependencies = [
 [[package]]
 name = "ely-debug"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-charts",
  "ely-core",
@@ -2004,7 +2004,7 @@ dependencies = [
 [[package]]
 name = "ely-desktop"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "anyhow",
  "ely-core",
@@ -2026,7 +2026,7 @@ dependencies = [
 [[package]]
 name = "ely-devtools"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-canvas",
  "ely-chat",
@@ -2065,7 +2065,7 @@ dependencies = [
 [[package]]
 name = "ely-documents"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "base64 0.22.1",
  "ely-core",
@@ -2094,7 +2094,7 @@ dependencies = [
 [[package]]
 name = "ely-editor"
 version = "0.2.0"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-charts",
  "ely-core",
@@ -2107,7 +2107,7 @@ dependencies = [
 [[package]]
 name = "ely-files"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "gpui-pre",
@@ -2137,7 +2137,7 @@ dependencies = [
 [[package]]
 name = "ely-finance"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-charts",
  "ely-core",
@@ -2150,7 +2150,7 @@ dependencies = [
 [[package]]
 name = "ely-generative"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-charts",
  "ely-chat",
@@ -2166,7 +2166,7 @@ dependencies = [
 [[package]]
 name = "ely-git"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "ely-editor",
@@ -2178,7 +2178,7 @@ dependencies = [
 [[package]]
 name = "ely-gpui-component"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "anyhow",
  "ely-account",
@@ -2217,7 +2217,7 @@ dependencies = [
 [[package]]
 name = "ely-interaction"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "gpui-pre",
@@ -2256,7 +2256,7 @@ dependencies = [
 [[package]]
 name = "ely-mail"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-chat",
  "ely-core",
@@ -2279,6 +2279,7 @@ dependencies = [
  "ely-ui",
  "embed-resource",
  "gpui-pre",
+ "image",
  "jiff",
  "log",
  "serde_json",
@@ -2336,7 +2337,7 @@ dependencies = [
 [[package]]
 name = "ely-maps"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "anyhow",
  "ely-canvas",
@@ -2377,7 +2378,7 @@ dependencies = [
 [[package]]
 name = "ely-media"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "ely-documents",
@@ -2391,7 +2392,7 @@ dependencies = [
 [[package]]
 name = "ely-messaging"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "ely-media",
@@ -2405,7 +2406,7 @@ dependencies = [
 [[package]]
 name = "ely-misc"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-canvas",
  "ely-core",
@@ -2450,7 +2451,7 @@ dependencies = [
 [[package]]
 name = "ely-onboarding"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "ely-documents",
@@ -2554,7 +2555,7 @@ dependencies = [
 [[package]]
 name = "ely-project"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-calendar",
  "ely-core",
@@ -2569,7 +2570,7 @@ dependencies = [
 [[package]]
 name = "ely-rendering"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "gpui-pre",
@@ -2581,7 +2582,7 @@ dependencies = [
 [[package]]
 name = "ely-settings"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "anyhow",
  "ely-canvas",
@@ -2637,7 +2638,7 @@ dependencies = [
 [[package]]
 name = "ely-terminal"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "alacritty_terminal",
  "anyhow",
@@ -2655,7 +2656,7 @@ dependencies = [
 [[package]]
 name = "ely-tooling"
 version = "0.1.1"
-source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=5070cf322df575c98f6b6403b6401ca6a0fc77c9#5070cf322df575c98f6b6403b6401ca6a0fc77c9"
+source = "git+https://github.com/ELY-Open-Source/Ely-GPUI-Components?rev=36dc8fad4c857122311af93086296c8511f37d38#36dc8fad4c857122311af93086296c8511f37d38"
 dependencies = [
  "ely-core",
  "ely-devtools",
@@ -6352,9 +6353,9 @@ dependencies = [
 
 [[package]]
 name = "pulldown-cmark"
-version = "0.13.5"
+version = "0.13.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "278e9268c93b9e498a2da46c34d90ba93a3255eb99009646398f34bc73ab36eb"
+checksum = "3db2be46835f013dd3f4fa7f5f7402c537787b54ebb6fe2b94bbdd7e2669bb7b"
 dependencies = [
  "bitflags 2.13.2",
  "memchr",

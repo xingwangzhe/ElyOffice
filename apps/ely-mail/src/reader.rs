@@ -141,13 +141,7 @@ impl Mail {
                 .child(self.headers(each, &letter.headers, cx))
                 .into_any_element();
         };
-        let drawn = MarkdownRenderer::blocks(format!("mail-body-{}", id.0), open.blocks.clone())
-            .pictures(open.pictures.clone())
-            .on_link(|url, _, cx| {
-                // The engine kept only web and mail links.
-                log::info!("mail: a link opens");
-                cx.open_url(url);
-            });
+        let drawn = open.reader.clone();
         part.children(self.pictures_notice(each, open, body, cx))
             .children(body.short.then(|| {
                 let cut = text(cx, "mail.reader.short", &[]);

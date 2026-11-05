@@ -4,7 +4,7 @@ use std::{collections::HashMap, rc::Rc};
 
 use ely_gpui_component::documents::{MarkdownBlock, Pictures};
 use ely_mail_engine::{MessageId, Stored};
-use gpui::{AppContext as _, Context};
+use gpui::{AppContext as _, Context, Entity};
 
 use crate::{
     letter::{self, Body, Kept, Letter, Words},
@@ -81,8 +81,8 @@ impl Version {
 
 /// A letter as drawn, with what it may load.
 pub struct Open {
+    pub reader: Entity<crate::body::BodyReader>,
     pub letter: Letter,
-    pub blocks: Rc<[MarkdownBlock]>,
     pub pictures: Rc<Pictures>,
     /// The sender's pictures always load.
     pub trusted: bool,
@@ -255,7 +255,7 @@ impl Mail {
                     if trust && letter.is_ok() {
                         trusted.push(stored.id);
                     }
-                    each(stored, letter, trust)
+                    each(stored, letter, trust, cx)
                 }
             })
             .collect();
@@ -298,7 +298,7 @@ fn build(plan: Vec<Member>, words: &Words) -> Vec<Built> {
     built.collect()
 }
 
-fn each(stored: Stored, letter: Laid, trusted: bool) -> Each {
+fn each(stored: Stored, letter: Laid, trusted: bool, cx: &mut Context<Mail>) -> Each {
     let open = letter.map(|(mut letter, blocks)| {
         let pictures = (letter.body.as_mut())
             .map(|body| std::mem::take(&mut body.pictures))
@@ -312,10 +312,13 @@ fn each(stored: Stored, letter: Laid, trusted: bool) -> Each {
                 body.trackers
             );
         }
+        let blocks: Rc<[MarkdownBlock]> = blocks.into();
+        let pictures = Rc::new(pictures);
+        let reader = cx.new(|cx| crate::body::BodyReader::new(blocks.clone(), pictures.clone(), cx));
         Open {
+            reader,
             letter,
-            blocks: blocks.into(),
-            pictures: Rc::new(pictures),
+            pictures,
             trusted,
             fetching: false,
         }

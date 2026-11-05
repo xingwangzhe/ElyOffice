@@ -1,6 +1,13 @@
 //! ElyMail's accounts.
 
 pub(super) const EN: &[(&str, &str)] = &[
+    ("mail.body.copy", "Copy"),
+    ("mail.body.all", "Select All"),
+    ("mail.body.copy_image", "Copy Image"),
+    ("mail.body.save_image", "Save Image As…"),
+    ("mail.body.copy_link", "Copy Link Address"),
+    ("mail.body.copy_failed", "The image could not be copied: {error}"),
+    ("mail.body.copied", "Image copied"),
     ("mail.menu.account", "Account"),
     ("mail.add.open", "Add Account…"),
     ("mail.remove.open", "Remove Account…"),
@@ -238,6 +245,13 @@ pub(super) const EN: &[(&str, &str)] = &[
 ];
 
 pub(super) const ZH_CN: &[(&str, &str)] = &[
+    ("mail.body.copy", "复制"),
+    ("mail.body.all", "全选正文"),
+    ("mail.body.copy_image", "复制图片"),
+    ("mail.body.save_image", "图片另存为…"),
+    ("mail.body.copy_link", "复制链接地址"),
+    ("mail.body.copy_failed", "无法复制图片：{error}"),
+    ("mail.body.copied", "图片已复制"),
     ("mail.menu.account", "账号"),
     ("mail.add.open", "添加账号…"),
     ("mail.remove.open", "删除账号…"),

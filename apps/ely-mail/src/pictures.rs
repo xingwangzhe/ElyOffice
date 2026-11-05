@@ -89,6 +89,10 @@ impl Mail {
         let mut pictures = (*open.pictures).clone();
         pictures.extend(fetched);
         open.pictures = Rc::new(pictures);
+        open.reader.update(cx, |reader, cx| {
+            reader.pictures = open.pictures.clone();
+            cx.notify();
+        });
         cx.notify();
     }
 
