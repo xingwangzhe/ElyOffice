@@ -3,7 +3,6 @@
 use std::{path::PathBuf, rc::Rc};
 
 use ely_gpui_component::{
-    documents::{MarkdownBlock, MarkdownRenderer, Pictures},
     feedback::{Alert, EmptyState, ErrorView},
     layout::ScrollArea,
     mail::{Contact, MailReader, Message},
@@ -13,7 +12,7 @@ use ely_mail_engine::{Mailbox, Part};
 use ely_platform::AppId;
 use ely_ui::Shell;
 use gpui::{
-    AnyElement, App, AppContext as _, Context, FocusHandle, IntoElement, ParentElement as _, Render,
+    AnyElement, AppContext as _, Context, FocusHandle, IntoElement, ParentElement as _, Render,
     Styled as _, Window, div, px, size,
 };
 
@@ -36,14 +35,13 @@ pub struct Shown {
     to: Vec<Mailbox>,
     cc: Vec<Mailbox>,
     date: Option<i64>,
-    blocks: Rc<[MarkdownBlock]>,
-    pictures: Rc<Pictures>,
+    reader: gpui::Entity<crate::body::BodyReader>,
     blocked: usize,
     pub files: Vec<Part>,
 }
 
-impl From<Read> for Shown {
-    fn from(read: Read) -> Self {
+impl Shown {
+    fn new(read: Read, cx: &mut Context<Eml>) -> Self {
         let (mail, body) = (read.mail, read.body);
         Shown {
             subject: mail.subject,
@@ -51,8 +49,7 @@ impl From<Read> for Shown {
             to: mail.to,
             cc: mail.cc,
             date: mail.date,
-            blocks: body.blocks.into(),
-            pictures: Rc::new(body.pictures),
+            reader: cx.new(|cx| crate::body::BodyReader::new(body.blocks.into(), Rc::new(body.pictures), cx)),
             blocked: body.remote.len() + body.trackers,
             files: mail.attachments,
         }
@@ -124,7 +121,7 @@ impl Eml {
         cx.spawn(async move |this, cx| {
             let read = cx.background_spawn(async move { read_file(&path, &words) }).await;
             this.update(cx, |eml, cx| {
-                eml.shown = Some(read.map(Shown::from));
+                eml.shown = Some(read.map(|read| Shown::new(read, cx)));
                 cx.notify();
             })
             .ok();
@@ -232,12 +229,7 @@ impl Eml {
             Alert::new("mail-eml-pictures", Severity::Info, words)
         });
         let this = cx.weak_entity();
-        let drawn = MarkdownRenderer::blocks("mail-eml-body", shown.blocks.clone())
-            .pictures(shown.pictures.clone())
-            .on_link(|url, _, cx: &mut App| {
-                log::info!("mail: a link in a message file opens");
-                cx.open_url(url);
-            });
+        let drawn = shown.reader.clone();
         let said = self.said.clone().map(|(severity, words)| Alert::new("mail-eml-said", severity, words));
         MailReader::new("mail-eml", subject, message)
             .on_download(move |_, index, _, cx| {

@@ -18,6 +18,7 @@ ely-mail-engine.workspace = true
 ely-platform.workspace = true
 ely-ui.workspace = true
 gpui.workspace = true
+image.workspace = true
 jiff.workspace = true
 log.workspace = true
 serde_json.workspace = true

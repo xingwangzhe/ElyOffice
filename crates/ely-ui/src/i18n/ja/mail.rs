@@ -1,6 +1,13 @@
 //! Japanese ElyMail accounts.
 
 pub(super) const JA: &[(&str, &str)] = &[
+    ("mail.body.copy", "コピー"),
+    ("mail.body.all", "本文をすべて選択"),
+    ("mail.body.copy_image", "画像をコピー"),
+    ("mail.body.save_image", "画像を別名で保存…"),
+    ("mail.body.copy_link", "リンク先のアドレスをコピー"),
+    ("mail.body.copy_failed", "画像をコピーできませんでした：{error}"),
+    ("mail.body.copied", "画像をコピーしました"),
     ("mail.menu.account", "アカウント"),
     ("mail.add.open", "アカウントを追加…"),
     ("mail.remove.open", "アカウントを削除…"),

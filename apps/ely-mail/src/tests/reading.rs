@@ -157,7 +157,7 @@ fn an_html_letter_reads_without_running_or_loading() {
     pick(&mail, "first", cx);
     cx.update(|_, app| {
         let open = opened(&mail, app).unwrap();
-        let shown: Vec<String> = (open.blocks.iter())
+        let shown: Vec<String> = (open.reader.read(app).blocks.iter())
             .map(|block| match block {
                 MarkdownBlock::Paragraph(line) => line.text.clone(),
                 MarkdownBlock::Image { url, .. } => url.clone(),
@@ -254,8 +254,9 @@ fn a_body_that_arrives_replaces_the_headers_shown() {
     });
     cx.update(|_, app| {
         let open = opened(&mail, app).unwrap();
-        let [MarkdownBlock::Paragraph(line)] = &open.blocks[..] else {
-            panic!("{:?}", open.blocks);
+        let blocks = &open.reader.read(app).blocks;
+        let [MarkdownBlock::Paragraph(line)] = &blocks[..] else {
+            panic!("{blocks:?}");
         };
         assert_eq!(line.text, "The old body");
     });

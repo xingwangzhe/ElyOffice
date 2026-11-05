@@ -1,6 +1,13 @@
 //! Korean mail messages.
 
 pub(super) const KO: &[(&str, &str)] = &[
+    ("mail.body.copy", "복사"),
+    ("mail.body.all", "본문 전체 선택"),
+    ("mail.body.copy_image", "이미지 복사"),
+    ("mail.body.save_image", "이미지를 다른 이름으로 저장…"),
+    ("mail.body.copy_link", "링크 주소 복사"),
+    ("mail.body.copy_failed", "이미지를 복사할 수 없습니다: {error}"),
+    ("mail.body.copied", "이미지 복사됨"),
     ("mail.menu.account", "계정"),
     ("mail.add.open", "계정 추가…"),
     ("mail.remove.open", "계정 제거…"),

@@ -1,6 +1,13 @@
 //! Vietnamese ElyMail accounts.
 
 pub(super) const VI: &[(&str, &str)] = &[
+    ("mail.body.copy", "Sao chép"),
+    ("mail.body.all", "Chọn toàn bộ nội dung"),
+    ("mail.body.copy_image", "Sao chép hình ảnh"),
+    ("mail.body.save_image", "Lưu hình ảnh thành…"),
+    ("mail.body.copy_link", "Sao chép địa chỉ liên kết"),
+    ("mail.body.copy_failed", "Không thể sao chép hình ảnh: {error}"),
+    ("mail.body.copied", "Đã sao chép hình ảnh"),
     ("mail.menu.account", "Tài khoản"),
     ("mail.add.open", "Thêm tài khoản…"),
     ("mail.remove.open", "Gỡ tài khoản…"),
