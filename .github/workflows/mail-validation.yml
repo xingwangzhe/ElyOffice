@@ -1,0 +1,25 @@
+name: ElyMail validation
+on:
+  push:
+    branches: [ci/elymail-body-copy]
+permissions:
+  contents: read
+jobs:
+  mail:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      CARGO_TERM_COLOR: never
+      CARGO_BUILD_JOBS: 2
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: 35940e781fde6e759a922806ddf6b00e42827dea
+      - name: Native libraries
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libdbus-1-dev libfontconfig-dev libxcb1-dev libxkbcommon-x11-dev
+      - name: ElyMail Clippy
+        run: cargo clippy --manifest-path apps/ely-mail/Cargo.toml --all-targets --locked -- -D warnings
+      - name: ElyMail tests
+        run: cargo test --manifest-path apps/ely-mail/Cargo.toml --locked
